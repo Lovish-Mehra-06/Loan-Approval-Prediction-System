@@ -1,8 +1,9 @@
-# Loan Approval Prediction System
+# Loan Approval Prediction System 
+![Status](https://img.shields.io/badge/Project-Deployed-brightgreen)
 
-## 🛠 Status
+## 🌐 Live Demo
 
-![Status](https://img.shields.io/badge/Project-In%20Progress-yellow)
+🚀 App Link: https://loan-approval-predict-system.streamlit.app 
 
 ## 🧠 Project Overview
 
@@ -38,17 +39,18 @@ Develop an end-to-end machine learning system to predict whether a loan applicat
 
 ## 🔍 Project Workflow
 
-1. Data Loading & Inspection
-2. Missing Value Analysis
-3. Exploratory Data Analysis (EDA)
-4. Feature Engineering (Total Income, etc.)
-5. Encoding categorical variables
-6. Train-test split
-7. Baseline models (Logistic Regression, RF, XGBoost)
-8. Hyperparameter tuning (RandomizedSearchCV)
-9. Model comparison using F1-score
-10. Final model selection
-
+1. Data Loading & Inspection  
+2. Missing Value Analysis  
+3. Exploratory Data Analysis (EDA)  
+4. Feature Engineering (Total Income creation)  
+5. Encoding categorical variables  
+6. Train-test split  
+7. Model training (Logistic Regression, Random Forest, XGBoost)  
+8. Model evaluation using Accuracy, Precision, Recall, F1-score  
+9. Hyperparameter tuning using RandomizedSearchCV  
+10. Final model selection based on F1-score  
+11. Model saving using Joblib  
+12. Deployment using Streamlit Cloud  
 ---
 
 ## 📈 Model Performance
@@ -99,7 +101,7 @@ Loan-Prediction/
 
 ```markdown id="allin1"
 git clone https://github.com/Lovish-Mehra-06/Loan-Approval-Prediction-System.git
-cd "Loan Approval Prediction System"
+cd "Loan-Approval-Prediction-System"
 ```
 
 ### 2️⃣ Install dependencies
@@ -126,7 +128,14 @@ streamlit run app.py
 - Ensure `model/features.pkl` exists
 
 ---
+## 🚀 Deployment
 
+This project is deployed using Streamlit Cloud.
+
+- Automatically updates when code is pushed to GitHub
+- Live prediction system available online
+
+---
 ## 🚀 Improvements Implemented
 
 - Hyperparameter tuning using RandomizedSearchCV for better model performance
