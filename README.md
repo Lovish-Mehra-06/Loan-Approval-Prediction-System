@@ -134,11 +134,11 @@ streamlit run app.py
 - Engineered features like Total Income for improved prediction accuracy
 - Encoded categorical variables for model compatibility
 - Saved final trained model and feature schema for deployment
+- Deployed full Streamlit web application
 
 ## 📌 Possible Extensions
 
 - Add model explainability using SHAP or feature importance plots
-- Deploy full Streamlit web application (in prog)
 - Improve UI/UX of prediction interface
 
 ---
