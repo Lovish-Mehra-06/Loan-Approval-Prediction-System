@@ -1,5 +1,9 @@
 # Loan Approval Prediction System
 
+## 🧠 Project Overview
+
+This project builds a machine learning pipeline to predict loan approval using applicant financial and demographic data. It includes data preprocessing, feature engineering, model training, and evaluation using multiple ML algorithms.
+
 ## 📌 Problem Statement
 
 Develop an end-to-end machine learning system to predict whether a loan application will be approved based on applicant demographics, financial details, and credit history.
@@ -10,7 +14,9 @@ Develop an end-to-end machine learning system to predict whether a loan applicat
 
 - **Source:** Kaggle Loan Prediction Dataset
 - **Type:** Supervised Learning (Classification)
-- **Target Variable:** `Loan_Status` (Y → Approved, N → Not Approved)
+- **Target Variable:** `loan_status` (Y → Approved, N → Not Approved)
+- Dataset Shape: (rows, columns)
+- Total Features: 13
 
 ---
 
@@ -30,7 +36,7 @@ Develop an end-to-end machine learning system to predict whether a loan applicat
 
 1. **Data Understanding & EDA** – analyzed feature distributions and relationships
 2. **Data Cleaning** – handled missing values and inconsistent entries
-3. **Feature Engineering** – created `Total_Income` for better representation
+3. **Feature Engineering** – created `total_income` for better representation
 4. **Data Preprocessing** – encoded categorical variables and prepared dataset
 5. **Model Building** – trained multiple models:
     - Logistic Regression (baseline)
