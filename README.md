@@ -1,5 +1,9 @@
 # Loan Approval Prediction System
 
+## 🛠 Status
+
+![Status](https://img.shields.io/badge/Project-In%20Progress-yellow)
+
 ## 🧠 Project Overview
 
 This project builds a machine learning pipeline to predict loan approval using applicant financial and demographic data. It includes data preprocessing, feature engineering, model training, and evaluation using multiple ML algorithms.
@@ -15,7 +19,7 @@ Develop an end-to-end machine learning system to predict whether a loan applicat
 - **Source:** Kaggle Loan Prediction Dataset
 - **Type:** Supervised Learning (Classification)
 - **Target Variable:** `loan_status` (Y → Approved, N → Not Approved)
-- Dataset Shape: (rows, columns)
+- Dataset Shape: (614, 13)
 - Total Features: 13
 
 ---
@@ -34,17 +38,16 @@ Develop an end-to-end machine learning system to predict whether a loan applicat
 
 ## 🔍 Project Workflow
 
-1. **Data Understanding & EDA** – analyzed feature distributions and relationships
-2. **Data Cleaning** – handled missing values and inconsistent entries
-3. **Feature Engineering** – created `total_income` for better representation
-4. **Data Preprocessing** – encoded categorical variables and prepared dataset
-5. **Model Building** – trained multiple models:
-    - Logistic Regression (baseline)
-    - Random Forest
-    - XGBoost
-
-6. **Model Evaluation** – compared models using performance metrics
-7. **Model Selection** – selected best-performing model
+1. Data Loading & Inspection
+2. Missing Value Analysis
+3. Exploratory Data Analysis (EDA)
+4. Feature Engineering (Total Income, etc.)
+5. Encoding categorical variables
+6. Train-test split
+7. Baseline models (Logistic Regression, RF, XGBoost)
+8. Hyperparameter tuning (RandomizedSearchCV)
+9. Model comparison using F1-score
+10. Final model selection
 
 ---
 
@@ -63,7 +66,16 @@ Develop an end-to-end machine learning system to predict whether a loan applicat
 - Recall
 - F1-score
 
-> Final results and comparison will be updated after training and tuning.
+## 🏆 Best Model
+
+- Model: XGBoost (after tuning)
+- Evaluation Metric: F1-score
+- Final Accuracy: 78% (f1-score: 85%)
+
+## 📊 Evaluation Details
+
+- Confusion Matrix used for performance analysis
+- Focused on F1-score due to class imbalance
 
 ---
 
@@ -78,22 +90,63 @@ Loan-Prediction/
 ├── app.py         # Streamlit deployment
 ├── README.md
 ├── requirements.txt
+├── .gitignore
 ```
+
+## 🚀 How to Run
+
+### 1️⃣ Clone the repository
+
+```markdown id="allin1"
+git clone https://github.com/Lovish-Mehra-06/Loan-Approval-Prediction-System.git
+cd "Loan Approval Prediction System"
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Run Jupyter Notebook (EDA + Model Training)
+
+```bash
+jupyter notebook
+```
+
+### 4️⃣ Run Streamlit App (Deployment)
+
+```bash
+streamlit run app.py
+```
+
+### Note:
+
+- Ensure `model/loan_approval_prediction_model.pkl` exists
+- Ensure `model/features.pkl` exists
 
 ---
 
-## 🚀 Future Improvements
+## 🚀 Improvements Implemented
 
-- Hyperparameter tuning for improved performance
-- Deploy interactive Streamlit web app
-- Add model explainability (feature importance, SHAP)
-- Improve feature engineering techniques
+- Hyperparameter tuning using RandomizedSearchCV for better model performance
+- Built multiple models (Logistic Regression, Random Forest, XGBoost) and compared results
+- Engineered features like Total Income for improved prediction accuracy
+- Encoded categorical variables for model compatibility
+- Saved final trained model and feature schema for deployment
+
+## 📌 Possible Extensions
+
+- Add model explainability using SHAP or feature importance plots
+- Deploy full Streamlit web application (in prog)
+- Improve UI/UX of prediction interface
 
 ---
 
 ## 💡 Key Insight
 
-Credit history is one of the most influential features in determining loan approval, significantly impacting model predictions.
+- Credit history and total income are the most influential features in predicting loan approval.
+- Tree-based models captured nonlinear relationships better than linear models, but required tuning to avoid overfitting.
 
 ---
 
